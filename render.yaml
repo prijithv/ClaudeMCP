@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: my-claude-mcp-connector
+    runtime: node
+    plan: free          # Free tier on Render
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: SERVER_NAME
+        value: my-claude-connector
